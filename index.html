@@ -12,21 +12,25 @@
   <body>
     <div class="container">
       <nav>
-        <div class="mobile-nav">
-          <div class="burger">
-            <a href=""> <img src="img/hamburger.svg" alt="menu hamburger" /></a>
+        <div class="burger">
+          <div class="lines">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
           </div>
-          <ul style="display: none">
-            <li><a href="">About</a></li>
-            <li><a href="">Skills</a></li>
-            <li><a href="">Projects</a></li>
-            <li><a href="">Contacts</a></li>
+        </div>
+        <div class="mobile-nav">
+          <ul class="nav-list">
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contacts">Contacts</a></li>
           </ul>
         </div>
       </nav>
       <header class="developer">
         <div class="person">
-          <img src="img/ArnasLuksas.svg" alt="Arnas Luksas img" />
+          <img src="img/IMG-2631.png" alt="Arnas Luksas img" />
           <h1 class="name">Arnas Luksas</h1>
           <h2 class="title">Web Developer</h2>
         </div>
@@ -40,18 +44,21 @@
         </ul>
       </div>
 
-      <section class="about">
+      <section id="about">
         <h2 class="about-title">So who I am?</h2>
         <p class="about-description">
-          As you already know that my name is Arnas and I am a self-taught Web
-          Developer, which means that I have the motivation to go further. I
-          would like to work in a team, exchange ideas, gain new skills and
-          create solid websites like a PRO. I'm educated at VTDK I have a
-          bachelor's degree. I'm located in Lithuania Vilnius. if you are
-          interested please contact me
+          As you already know my name is Arnas and I am a self-taught Web
+          Developer, which means that I have the motivation to go further.
+          <br />
+          I would like to work in a team, exchange ideas, gain new skills and
+          create solid websites like a PRO.
+          <br />
+          I'm educated at VTDK I have a bachelor's degree and I'm located in
+          Lithuania Vilnius. if you are interested please
+          <a href="">contact me</a>
         </p>
       </section>
-      <section class="skills">
+      <section id="skills">
         <h2 class="skills-title">The tools I use</h2>
         <div class="skills-list">
           <div class="html-skill">
@@ -85,27 +92,29 @@
           </div>
         </div>
       </section>
-      <section class="projects">
+      <section id="projects">
         <h2 class="projects-title">Projects</h2>
-        <div class="project">
-          <a href=""><img src="" alt="" /></a>
-          <h5>Website</h5>
-        </div>
-        <div class="project">
-          <a href=""><img src="" alt="" /></a>
-          <h5>Website</h5>
-        </div>
-        <div class="project">
-          <a href=""><img src="" alt="" /></a>
-          <h5>Website</h5>
-        </div>
-        <div class="project">
-          <a href=""><img src="" alt="" /></a>
-          <h5>Website</h5>
+        <div class="projects-list">
+          <div class="project">
+            <a href=""><img src="/img/luxes.png" alt="" /></a>
+            <h5>Individualių namų statyba</h5>
+          </div>
+          <div class="project">
+            <a href=""><img src="/img/luxes.png" alt="" /></a>
+            <h5>Website</h5>
+          </div>
+          <div class="project">
+            <a href=""><img src="/img/luxes.png" alt="" /></a>
+            <h5>Website</h5>
+          </div>
+          <div class="project">
+            <a href=""><img src="/img/luxes.png" alt="" /></a>
+            <h5>Website</h5>
+          </div>
         </div>
       </section>
-      <section class="contacts">
-        <h2 class="contacts-title"></h2>
+      <section id="contacts">
+        <h2 class="contacts-title">Contacts</h2>
         <div>
           <a href="mailto:arnasluksas@gmail.com">arnasluksas@gmail.com</a>
           <div class="social">
@@ -121,7 +130,11 @@
           </div>
         </div>
       </section>
-      <footer>&copy; 2021 <a href="">Arnas Luskas</a></footer>
+      <footer>
+        &copy; 2021 &nbsp;<a href="https://www.arnasluksas.lt">Arnas Luskas</a>
+      </footer>
     </div>
+
+    <script src="js/app.js"></script>
   </body>
 </html>

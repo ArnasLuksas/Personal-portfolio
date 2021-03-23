@@ -14,29 +14,130 @@ body {
   height: 100%;
 }
 
-nav {
+.container {
+  margin: 0 auto;
+}
+
+.container nav {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
+  padding-top: 10px;
+  padding-right: 10px;
+  padding-bottom: 10px;
+  background: -webkit-gradient(linear, left top, right top, color-stop(-150%, #66ff99), to(#ffffff));
+  background: linear-gradient(to right, #66ff99 -150%, #ffffff 100%);
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 100%;
 }
 
-header {
+.container nav .burger {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.container nav .burger .lines {
+  cursor: pointer;
+}
+
+.container nav .burger .line {
+  background: rgba(12, 21, 10, 0.85);
+  width: 30px;
+  height: 2px;
+  margin: 8px;
+  border-radius: 5px;
+}
+
+.container nav .mobile-nav {
+  width: 100%;
+}
+
+.container nav .mobile-nav .nav-list {
+  list-style-type: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  display: none;
+}
+
+.container nav .mobile-nav .nav-list li {
+  margin: 1rem 0;
+}
+
+.container nav .mobile-nav .nav-list li a {
+  color: rgba(12, 21, 10, 0.71);
+  text-decoration: none;
+}
+
+.container nav .mobile-nav .show {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.container .developer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  padding: 4rem 2rem 4rem 2rem;
+  background: -webkit-gradient(linear, left top, right top, color-stop(-150%, #66ff99), to(#ffffff));
+  background: linear-gradient(to right, #66ff99 -150%, #ffffff 100%);
 }
 
-.about,
-.skills,
-.projects,
-.contacts,
-footer {
+.container .developer .person {
+  text-align: center;
+}
+
+.container .developer .person img {
+  height: 200px;
+  width: 200px;
+}
+
+.container .developer .person .name {
+  color: rgba(12, 21, 10, 0.85);
+  font-size: 48px;
+  font-weight: 400;
+  padding-top: 2rem;
+}
+
+.container .developer .person .title {
+  color: rgba(12, 21, 10, 0.71);
+  font-size: 32px;
+  text-align: left;
+  font-weight: 400;
+}
+
+.container #about,
+.container #skills,
+.container #projects,
+.container #contacts {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -47,18 +148,61 @@ footer {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin: 2rem;
+  padding: 4rem 2rem 4rem 2rem;
 }
 
-.about h2,
-.skills h2,
-.projects h2,
-.contacts h2,
-footer h2 {
-  border-bottom: 1px solid black;
+.container #about h2,
+.container #skills h2,
+.container #projects h2,
+.container #contacts h2 {
+  border-bottom: 1px solid rgba(12, 21, 10, 0.71);
+  font-weight: 400;
+  color: rgba(12, 21, 10, 0.71);
+  margin-bottom: 2rem;
 }
 
-.skills-list {
+.container #about p,
+.container #skills p,
+.container #projects p,
+.container #contacts p {
+  color: rgba(12, 21, 10, 0.71);
+}
+
+.container #about .about-title,
+.container #about .skills-title,
+.container #about .projects-title,
+.container #about .contacts-title,
+.container #skills .about-title,
+.container #skills .skills-title,
+.container #skills .projects-title,
+.container #skills .contacts-title,
+.container #projects .about-title,
+.container #projects .skills-title,
+.container #projects .projects-title,
+.container #projects .contacts-title,
+.container #contacts .about-title,
+.container #contacts .skills-title,
+.container #contacts .projects-title,
+.container #contacts .contacts-title {
+  font-size: 32px;
+}
+
+.container .about-description {
+  line-height: 150%;
+  font-size: 16px;
+}
+
+.container .about-description a {
+  color: rgba(12, 21, 10, 0.85);
+}
+
+.container #skills {
+  background: -webkit-gradient(linear, right top, left top, color-stop(-200%, #66ff99), to(#ffffff));
+  background: linear-gradient(to left, #66ff99 -200%, #ffffff 100%);
+}
+
+.container #skills .skills-list,
+.container #skills .projects-list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -69,9 +213,75 @@ footer h2 {
           justify-content: center;
 }
 
-.skills-list div {
+.container #skills .skills-list div,
+.container #skills .projects-list div {
   padding: 1rem 1rem;
   text-align: center;
   width: 33.3%;
+}
+
+.container #projects .project {
+  margin-bottom: 2rem;
+}
+
+.container #projects .project img {
+  height: 200px;
+  width: 100%;
+  -webkit-box-shadow: 0px 0px 3px 0px rgba(12, 21, 10, 0.75);
+          box-shadow: 0px 0px 3px 0px rgba(12, 21, 10, 0.75);
+}
+
+.container #projects .project h5 {
+  font-weight: 400;
+  color: rgba(12, 21, 10, 0.71);
+}
+
+.container #contacts {
+  background: -webkit-gradient(linear, left top, right top, color-stop(-150%, #66ff99), to(#ffffff));
+  background: linear-gradient(to right, #66ff99 -150%, #ffffff 100%);
+  text-align: center;
+  padding-bottom: 2rem;
+}
+
+.container #contacts div {
+  margin-top: 2rem;
+}
+
+.container #contacts div a {
+  color: rgba(12, 21, 10, 0.85);
+}
+
+.container #contacts .social {
+  margin: 2rem 0;
+}
+
+.container #contacts .social a {
+  padding: 0 0.5rem;
+}
+
+.container #contacts .social a img {
+  height: 50px;
+  width: 50px;
+}
+
+footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background: -webkit-gradient(linear, left top, right top, color-stop(-150%, #66ff99), to(#ffffff));
+  background: linear-gradient(to right, #66ff99 -150%, #ffffff 100%);
+}
+
+footer a {
+  color: rgba(12, 21, 10, 0.71);
+}
+
+@media (min-width: 480px) {
+  body {
+    display: none;
+  }
 }
 /*# sourceMappingURL=main.css.map */

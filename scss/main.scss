@@ -1,12 +1,6 @@
-// :root {
-//   --first: hsl(112, 34, 6, 64);
-//   --second: hsl(112, 34, 6, 71);
-//   --third:--red: red;
-// }
+$first-color: rgba(12, 21, 10, 0.85); // almost black
+$second-color: rgba(12, 21, 10, 0.71); // grey
 
-// $first-color: hsl(112, 34, 6, 64%);
-// $second-color: hsl(112, 34, 6, 71%);
-// $third: red;
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;700&display=swap');
 
 * {
@@ -22,37 +16,190 @@ body {
   height: 100%;
 }
 
-nav {
-  display: flex;
-  justify-content: flex-end;
-  // position: fixed;
-}
+.container {
+  margin: 0 auto;
 
-header {
-  display: flex;
-  justify-content: center;
-}
+  //navigation
 
-.about,
-.skills,
-.projects,
-.contacts,
-footer {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: 2rem;
-  h2 {
-    border-bottom: 1px solid black;
+  nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding-top: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    background: linear-gradient(to right, #66ff99 -150%, #ffffff 100%);
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 100%;
+    .burger {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      .lines {
+        cursor: pointer;
+      }
+      .line {
+        background: $first-color;
+        width: 30px;
+        height: 2px;
+        margin: 8px;
+        border-radius: 5px;
+      }
+    }
+    .mobile-nav {
+      width: 100%;
+
+      .nav-list {
+        list-style-type: none;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        display: none;
+        li {
+          margin: 1rem 0;
+          a {
+            color: $second-color;
+            text-decoration: none;
+          }
+        }
+      }
+      .show {
+        display: flex;
+      }
+    }
+  }
+  //header
+  .developer {
+    display: flex;
+    justify-content: center;
+    padding: 4rem 2rem 4rem 2rem;
+    background: linear-gradient(to right, #66ff99 -150%, #ffffff 100%);
+
+    .person {
+      text-align: center;
+      img {
+        height: 200px;
+        width: 200px;
+      }
+      .name {
+        color: $first-color;
+        font-size: 48px;
+        font-weight: 400;
+        padding-top: 2rem;
+      }
+      .title {
+        color: $second-color;
+        font-size: 32px;
+        text-align: left;
+        font-weight: 400;
+      }
+    }
+  }
+  //sections about, skills ,projects, contacts, footer
+
+  //main styles
+  #about,
+  #skills,
+  #projects,
+  #contacts {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 4rem 2rem 4rem 2rem;
+
+    h2 {
+      border-bottom: 1px solid $second-color;
+      font-weight: 400;
+      color: $second-color;
+      margin-bottom: 2rem;
+    }
+    p {
+      color: $second-color;
+    }
+    .about-title,
+    .skills-title,
+    .projects-title,
+    .contacts-title {
+      font-size: 32px;
+    }
+  }
+
+  //about
+  .about-description {
+    line-height: 150%;
+    font-size: 16px;
+    a {
+      color: $first-color;
+    }
+  }
+  //skills
+  #skills {
+    background: linear-gradient(to left, #66ff99 -200%, #ffffff 100%);
+    .skills-list,
+    .projects-list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      div {
+        padding: 1rem 1rem;
+        text-align: center;
+        width: 33.3%;
+      }
+    }
+  }
+
+  //projects
+  #projects {
+    .project {
+      margin-bottom: 2rem;
+      img {
+        height: 200px;
+        width: 100%;
+        box-shadow: 0px 0px 3px 0px rgba(12, 21, 10, 0.75);
+      }
+      h5 {
+        font-weight: 400;
+        color: $second-color;
+      }
+    }
+  }
+  //contacts
+  #contacts {
+    background: linear-gradient(to right, #66ff99 -150%, #ffffff 100%);
+    text-align: center;
+    padding-bottom: 2rem;
+    div {
+      margin-top: 2rem;
+      a {
+        color: $first-color;
+      }
+    }
+    .social {
+      margin: 2rem 0;
+      a {
+        padding: 0 0.5rem;
+        img {
+          height: 50px;
+          width: 50px;
+        }
+      }
+    }
   }
 }
-.skills-list {
+//footer
+footer {
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
-  div {
-    padding: 1rem 1rem;
-    text-align: center;
-    width: 33.3%;
+  background: linear-gradient(to right, #66ff99 -150%, #ffffff 100%);
+  a {
+    color: $second-color;
+  }
+}
+
+@media (min-width: 480px) {
+  body {
+    display: none;
   }
 }
