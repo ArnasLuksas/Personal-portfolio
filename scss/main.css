@@ -278,10 +278,4 @@ footer {
 footer a {
   color: rgba(12, 21, 10, 0.71);
 }
-
-@media (min-width: 480px) {
-  body {
-    display: none;
-  }
-}
 /*# sourceMappingURL=main.css.map */
