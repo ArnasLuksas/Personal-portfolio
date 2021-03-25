@@ -103,6 +103,12 @@ body {
       }
     }
   }
+
+  //sticky nav
+
+  .sticky-nav {
+    display: none;
+  }
   //sections about, skills ,projects, contacts, footer
 
   //main styles
@@ -130,10 +136,6 @@ body {
     .contacts-title {
       font-size: 32px;
     }
-    // .project {
-    //   width: 100%;
-    //   // height: 300px;
-    // }
   }
 
   //about
@@ -167,7 +169,6 @@ body {
       img {
         width: 100%;
         height: 100%;
-        box-shadow: 0px 0px 3px 0px rgba(12, 21, 10, 0.75);
       }
       h5 {
         font-weight: 400;
@@ -228,8 +229,9 @@ footer {
       justify-content: center;
       max-width: 768px;
       .project {
-        width: 320px;
+        width: 45%;
         margin: 1rem 1rem;
+        margin-bottom: 2rem;
       }
     }
   }
@@ -244,53 +246,162 @@ footer {
       }
     }
     .developer {
-      // justify-content: space-between;
-      padding-top: 12rem;
-      padding-bottom: 12rem;
+      padding-top: 8rem;
+      padding-bottom: 8rem;
 
       .person {
-        div {
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          text-align: left;
-          // margin-left: 8rem;
-          .mini-nav {
-            display: flex;
-          }
-        }
+        display: flex;
         img {
           width: 250px;
           height: 250px;
           margin: 0 2.5rem;
         }
-        display: flex;
-        .name {
-          font-size: 48px;
-          margin: 0 2.5rem;
-        }
-        .title {
-          font-size: 32px;
-          margin: 0 2.5rem;
-        }
-        .mini-nav {
+        div {
           display: flex;
-          flex-direction: row;
+          flex-direction: column;
           justify-content: center;
-          border-bottom: 0.5px solid $second-color;
-          margin: 0 2.5rem;
+          text-align: left;
+          .name {
+            font-size: 48px;
+            margin: 0 2.5rem;
+          }
+          .title {
+            font-size: 32px;
+            margin: 0 2.5rem;
+          }
 
-          li {
-            font-size: 24px;
-            list-style: none;
-            margin: 1rem 1.4rem;
+          .mini-nav {
+            display: flex;
+            flex-direction: row;
+            border-bottom: 0.5px solid $second-color;
+            margin: 0 0.5rem;
 
-            a {
-              text-decoration: none;
-              color: $second-color;
+            li {
+              font-size: 16px;
+              list-style: none;
+              margin: 2.5rem 0rem 0.4rem 0rem;
+
+              a {
+                text-decoration: none;
+                padding-bottom: 0.34rem;
+                padding: 0 2rem 0.34rem 2rem;
+                color: $second-color;
+              }
+              a:hover {
+                border-bottom: 1px solid $first-color;
+              }
             }
           }
         }
+      }
+    }
+
+    .sticky-nav {
+      display: flex;
+      justify-content: center;
+      ul {
+        display: flex;
+        justify-content: center;
+        border-bottom: 0.5px solid $second-color;
+        margin-top: 30px;
+        padding-bottom: 0.5rem;
+        width: 588px;
+
+        li {
+          list-style: none;
+          padding: 0 2rem;
+
+          a {
+            text-decoration: none;
+            color: $second-color;
+            padding: 0.44rem 1.5rem 0.44rem 1.5rem;
+          }
+        }
+      }
+      a:hover {
+        border-bottom: 1px solid $first-color;
+      }
+    }
+    #about {
+      flex-wrap: wrap;
+      flex-direction: row-reverse;
+      justify-content: center;
+      // width: 100%;
+      padding: 8rem 2rem;
+      .about-title {
+        width: 25%;
+        margin-left: 1.5rem;
+        text-align: center;
+        h2 {
+          margin-bottom: 0rem;
+        }
+      }
+      .about-description {
+        width: 45%;
+        margin-right: 1.5rem;
+      }
+    }
+    #skills {
+      flex-wrap: wrap;
+      flex-direction: row;
+      justify-content: center;
+      width: 100%;
+      padding: 8rem 2rem;
+      h2 {
+        margin-bottom: 0rem;
+      }
+      .skills-title {
+        width: 25%;
+        margin-right: 1.5rem;
+        text-align: center;
+      }
+      .skills-list {
+        width: 45%;
+        margin-left: 1.5rem;
+      }
+    }
+    #projects {
+      flex-direction: row-reverse;
+      justify-content: center;
+      padding: 8rem 2rem;
+      h2 {
+        margin-bottom: 0rem;
+      }
+      .projects-title {
+        width: 25%;
+        text-align: center;
+        margin-left: 1.5rem;
+      }
+      .projects-list {
+        width: 45%;
+        flex-wrap: wrap;
+        margin-right: 1.5rem;
+        .project {
+          width: 42%;
+          margin-bottom: 1rem;
+          img {
+            width: 100%;
+          }
+        }
+      }
+    }
+    #contacts {
+      flex-wrap: wrap;
+      flex-direction: row;
+      justify-content: center;
+      width: 100%;
+      padding: 8rem 2rem;
+      h2 {
+        margin-bottom: 0rem;
+      }
+      .contacts-title {
+        width: 25%;
+        margin-right: 1.5rem;
+        text-align: center;
+      }
+      .contacts-list {
+        width: 45%;
+        margin-left: 1.5rem;
       }
     }
   }
@@ -299,48 +410,99 @@ footer {
 // Extra large devices (large desktops, 1200px and up)
 @media (min-width: 1200px) {
   .container {
-    nav {
-      .burger {
-        display: none;
-      }
-    }
     .developer {
-      // justify-content: space-between;
-      padding-top: 16rem;
-      padding-bottom: 16rem;
+      padding-top: 12rem;
+      padding-bottom: 12rem;
 
       .person {
-        div {
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          text-align: left;
-          margin-left: 8rem;
-        }
-        img {
-          width: 450px;
-          height: 450px;
-        }
-        display: flex;
-        .name {
-          font-size: 96px;
-        }
-        .title {
-          font-size: 64px;
-        }
-        .mini-nav {
-          display: flex;
-          flex-direction: row;
-          justify-content: center;
-          border-bottom: 0.5px solid $second-color;
-          li {
-            font-size: 24px;
-            list-style: none;
-            margin: 1rem 4rem;
+        justify-content: center;
 
-            a {
-              text-decoration: none;
-              color: $second-color;
+        img {
+          width: 30%;
+          height: 100%;
+        }
+        div {
+          .name {
+            font-size: 96px;
+          }
+          .title {
+            font-size: 64px;
+          }
+          .mini-nav {
+            margin: 0.5rem 1rem;
+            justify-content: center;
+
+            li {
+              font-size: 24px;
+              a {
+                padding: 0 4rem 0.34rem 4rem;
+              }
+            }
+          }
+        }
+      }
+    }
+    .sticky-nav {
+      ul {
+        width: 688px;
+        li {
+          font-size: 24px;
+        }
+      }
+    }
+    #about {
+      padding: 8rem 0rem;
+
+      .about-title {
+        font-size: 48px;
+      }
+      .about-description {
+        font-size: 24px;
+      }
+    }
+    #skills {
+      padding: 8rem 0rem;
+
+      .skills-title {
+        font-size: 48px;
+      }
+      .skills-list {
+        div {
+          font-size: 24px;
+          img {
+            height: 100px;
+          }
+        }
+      }
+    }
+    #projects {
+      padding: 8rem 0rem;
+
+      .projects-title {
+        font-size: 48px;
+      }
+      .projects-list {
+        .project {
+          margin-bottom: 3rem;
+          h5 {
+            font-size: 24px;
+          }
+        }
+      }
+    }
+    #contacts {
+      padding: 8rem 0rem;
+      .contacts-title {
+        font-size: 48px;
+      }
+      .contacts-list {
+        font-size: 24px;
+        .social {
+          a {
+            padding: 0 1.5rem;
+            img {
+              width: 70px;
+              height: 70px;
             }
           }
         }
