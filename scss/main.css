@@ -51,6 +51,7 @@ body {
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end;
+  border-bottom: none;
 }
 
 .container nav .burger .lines {
@@ -308,6 +309,21 @@ footer a {
 }
 
 @media (min-width: 992px) {
+  .container .show {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    background: white;
+  }
+  .container .hide {
+    visibility: hidden;
+  }
+  .container #about {
+    margin-top: -60px;
+  }
+  .container nav {
+    padding: 0;
+  }
   .container nav .burger {
     display: none;
   }
