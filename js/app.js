@@ -2,17 +2,20 @@
 const burgerLogo = document.querySelector('.lines');
 const mobNav = document.querySelector('.nav-list');
 const stickyNav = document.querySelector('.sticky-nav');
-
 const body = document.querySelector('body');
-// console.log(body);
-// console.log(stickyNav);
 
 //toogle mobile nav
 burgerLogo.addEventListener('click', () => {
   showNav();
+  animateBurger();
 });
 const showNav = () => {
   mobNav.classList.toggle('show');
+};
+
+//burger animation
+const animateBurger = () => {
+  burgerLogo.classList.toggle('change');
 };
 
 //after selecting item from list, we close the mobile nav
@@ -23,6 +26,7 @@ const closeNav = (e) => {
   const item = e.target.innerHTML;
   if (item) {
     mobNav.classList.remove('show');
+    burgerLogo.classList.remove('change');
   }
 };
 

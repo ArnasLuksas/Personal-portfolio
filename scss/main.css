@@ -52,6 +52,7 @@ body {
       -ms-flex-align: end;
           align-items: flex-end;
   border-bottom: none;
+  z-index: 1;
 }
 
 .container nav .burger .lines {
@@ -64,40 +65,65 @@ body {
   height: 2px;
   margin: 8px;
   border-radius: 5px;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.container nav .burger .change .line:nth-child(1) {
+  -webkit-transform: rotate(-45deg) translate(-7px, 9px);
+          transform: rotate(-45deg) translate(-7px, 9px);
+}
+
+.container nav .burger .change .line:nth-child(2) {
+  opacity: 0;
+}
+
+.container nav .burger .change .line:nth-child(3) {
+  -webkit-transform: rotate(45deg) translate(-5px, -7px);
+          transform: rotate(45deg) translate(-5px, -7px);
 }
 
 .container nav .mobile-nav {
   width: 100%;
+  position: relative;
 }
 
 .container nav .mobile-nav .nav-list {
   list-style-type: none;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  background: -webkit-gradient(linear, left top, right top, color-stop(-150%, #66ff99), to(#ffffff));
+  background: linear-gradient(to right, #66ff99 -150%, #ffffff 100%);
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  display: none;
+  -webkit-transition: 0.4s ease;
+  transition: 0.4s ease;
+  position: absolute;
+  top: -450px;
+  width: 100%;
+  text-align: center;
 }
 
 .container nav .mobile-nav .nav-list li {
-  margin: 1rem 0;
+  margin: 2.5rem 0;
 }
 
 .container nav .mobile-nav .nav-list li a {
   color: rgba(12, 21, 10, 0.71);
   text-decoration: none;
+  font-size: 24px;
+}
+
+.container nav .mobile-nav .nav-list li a:hover {
+  font-weight: 600;
 }
 
 .container nav .mobile-nav .show {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  position: relative;
+  top: 0;
 }
 
 .container .developer {
@@ -231,11 +257,12 @@ body {
 
 .container #projects .project {
   margin-bottom: 2rem;
+  width: 100%;
 }
 
 .container #projects .project img {
   width: 100%;
-  height: 100%;
+  border-top: 4px solid #c2f1d2;
 }
 
 .container #projects .project h5 {
@@ -330,6 +357,8 @@ footer a {
   .container .developer {
     padding-top: 8rem;
     padding-bottom: 8rem;
+    background: -webkit-gradient(linear, left top, right top, color-stop(-50%, #66ff99), color-stop(55%, #ffffff));
+    background: linear-gradient(to right, #66ff99 -50%, #ffffff 55%);
   }
   .container .developer .person {
     display: -webkit-box;
@@ -455,6 +484,8 @@ footer a {
             justify-content: center;
     width: 100%;
     padding: 8rem 2rem;
+    background: -webkit-gradient(linear, right top, left top, color-stop(-50%, #66ff99), color-stop(55%, #ffffff));
+    background: linear-gradient(to left, #66ff99 -50%, #ffffff 55%);
   }
   .container #skills h2 {
     margin-bottom: 0rem;
@@ -495,9 +526,11 @@ footer a {
   .container #projects .projects-list .project {
     width: 42%;
     margin-bottom: 1rem;
+    padding: 0 0 2rem 0;
   }
   .container #projects .projects-list .project img {
     width: 100%;
+    height: 100%;
   }
   .container #contacts {
     -ms-flex-wrap: wrap;
@@ -511,6 +544,8 @@ footer a {
             justify-content: center;
     width: 100%;
     padding: 8rem 2rem;
+    background: -webkit-gradient(linear, left top, right top, color-stop(-50%, #66ff99), color-stop(55%, #ffffff));
+    background: linear-gradient(to right, #66ff99 -50%, #ffffff 55%);
   }
   .container #contacts h2 {
     margin-bottom: 0rem;
@@ -523,6 +558,10 @@ footer a {
   .container #contacts .contacts-list {
     width: 45%;
     margin-left: 1.5rem;
+  }
+  .container footer {
+    background: -webkit-gradient(linear, left top, right top, color-stop(-50%, #66ff99), color-stop(55%, #ffffff));
+    background: linear-gradient(to right, #66ff99 -50%, #ffffff 55%);
   }
 }
 
@@ -595,7 +634,7 @@ footer a {
     margin-bottom: 3rem;
   }
   .container #projects .projects-list .project h5 {
-    font-size: 24px;
+    font-size: 20px;
   }
   .container #contacts {
     padding: 8rem 0rem;
