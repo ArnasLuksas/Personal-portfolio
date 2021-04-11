@@ -43,3 +43,8 @@ const nav = () => {
 };
 
 window.addEventListener('scroll', nav);
+
+//smooth scroll
+const scroll = new SmoothScroll('.container a[href*="#"]', {
+  speed: 800
+});

@@ -16,6 +16,8 @@ body {
 
 .container {
   margin: 0 auto;
+  height: 100%;
+  width: 100%;
 }
 
 .container nav {
@@ -99,7 +101,14 @@ body {
   -webkit-transition: 0.4s ease;
   transition: 0.4s ease;
   position: absolute;
-  top: -450px;
+  top: -950px;
+  height: 100vh;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: 100%;
   text-align: center;
 }
@@ -123,7 +132,7 @@ body {
   display: -ms-flexbox;
   display: flex;
   position: relative;
-  top: 0;
+  top: 0px;
 }
 
 .container .developer {
@@ -133,9 +142,13 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   padding: 4rem 2rem 4rem 2rem;
   background: -webkit-gradient(linear, left top, right top, color-stop(-150%, #66ff99), to(#ffffff));
   background: linear-gradient(to right, #66ff99 -150%, #ffffff 100%);
+  height: 100vh;
 }
 
 .container .developer .person {
@@ -167,6 +180,8 @@ body {
 
 .container .sticky-nav {
   display: none;
+  position: absolute;
+  top: 800px;
 }
 
 .container #about,
@@ -183,7 +198,11 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   padding: 4rem 2rem 4rem 2rem;
+  height: 100vh;
 }
 
 .container #about h2,
@@ -253,6 +272,10 @@ body {
   padding: 1rem 1rem;
   text-align: center;
   width: 33.3%;
+}
+
+.container #projects {
+  height: auto;
 }
 
 .container #projects .project {
@@ -337,9 +360,18 @@ footer a {
 
 @media (min-width: 992px) {
   .container .show {
-    position: -webkit-sticky;
-    position: sticky;
-    top: 0;
+    position: fixed;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 100%;
+    top: 0px;
     background: white;
   }
   .container .hide {
