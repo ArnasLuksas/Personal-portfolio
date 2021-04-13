@@ -73,8 +73,7 @@ body {
         flex-direction: column;
         transition: 0.4s ease;
         position: absolute;
-        top: -950px;
-        height: 100vh;
+        top: -450px;
         justify-content: center;
         align-items: center;
 
@@ -96,7 +95,8 @@ body {
       .show {
         display: flex;
         position: relative;
-        top: 0px;
+        top: -40px;
+        height: 100vh;
       }
     }
   }
@@ -141,7 +141,6 @@ body {
   .sticky-nav {
     display: none;
     position: absolute;
-    top: 800px;
   }
   //sections about, skills ,projects, contacts, footer
 
@@ -245,6 +244,7 @@ footer {
   background: linear-gradient(to right, #66ff99 -150%, #ffffff 100%);
   a {
     color: $second-color;
+    margin-bottom: 0.6rem;
   }
 }
 
@@ -291,11 +291,6 @@ footer {
     .hide {
       visibility: hidden;
     }
-    #about {
-      margin-top: -60px;
-    }
-    // .sticky-nav {
-    // }
 
     nav {
       padding: 0;
@@ -385,7 +380,6 @@ footer {
       flex-wrap: wrap;
       flex-direction: row-reverse;
       justify-content: center;
-      // width: 100%;
       padding: 8rem 2rem;
       .about-title {
         width: 25%;
@@ -515,8 +509,11 @@ footer {
       }
     }
     .sticky-nav {
+      // top: 2486px;
+
       ul {
         width: 688px;
+
         li {
           font-size: 24px;
         }

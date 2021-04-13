@@ -101,8 +101,7 @@ body {
   -webkit-transition: 0.4s ease;
   transition: 0.4s ease;
   position: absolute;
-  top: -950px;
-  height: 100vh;
+  top: -450px;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -132,7 +131,8 @@ body {
   display: -ms-flexbox;
   display: flex;
   position: relative;
-  top: 0px;
+  top: -40px;
+  height: 100vh;
 }
 
 .container .developer {
@@ -181,7 +181,6 @@ body {
 .container .sticky-nav {
   display: none;
   position: absolute;
-  top: 800px;
 }
 
 .container #about,
@@ -334,6 +333,7 @@ footer {
 
 footer a {
   color: rgba(12, 21, 10, 0.71);
+  margin-bottom: 0.6rem;
 }
 
 @media (min-width: 768px) {
@@ -376,9 +376,6 @@ footer a {
   }
   .container .hide {
     visibility: hidden;
-  }
-  .container #about {
-    margin-top: -60px;
   }
   .container nav {
     padding: 0;

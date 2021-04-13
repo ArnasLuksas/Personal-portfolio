@@ -46,5 +46,5 @@ window.addEventListener('scroll', nav);
 
 //smooth scroll
 const scroll = new SmoothScroll('.container a[href*="#"]', {
-  speed: 800
+  speed: 1000
 });
