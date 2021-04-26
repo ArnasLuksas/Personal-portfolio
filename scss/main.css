@@ -2,10 +2,8 @@
 * {
   margin: 0;
   padding: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  -ms-touch-action: manipulation;
-      touch-action: manipulation;
+  box-sizing: border-box;
+  touch-action: manipulation;
   font-family: 'Nunito', sans-serif;
 }
 
@@ -21,38 +19,24 @@ body {
 }
 
 .container nav {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
+  flex-direction: column;
+  justify-content: flex-end;
   padding-top: 10px;
   padding-right: 10px;
   padding-bottom: 10px;
-  background: -webkit-gradient(linear, left top, right top, color-stop(-150%, #66ff99), to(#ffffff));
   background: linear-gradient(to right, #66ff99 -150%, #ffffff 100%);
   position: fixed;
   right: 0;
   top: 0;
   width: 100%;
+  z-index: 3;
 }
 
 .container nav .burger {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
+  flex-direction: column;
+  align-items: flex-end;
   border-bottom: none;
   z-index: 1;
 }
@@ -67,13 +51,11 @@ body {
   height: 2px;
   margin: 8px;
   border-radius: 5px;
-  -webkit-transition: 0.4s;
   transition: 0.4s;
 }
 
 .container nav .burger .change .line:nth-child(1) {
-  -webkit-transform: rotate(-45deg) translate(-7px, 9px);
-          transform: rotate(-45deg) translate(-7px, 9px);
+  transform: rotate(-45deg) translate(-7px, 9px);
 }
 
 .container nav .burger .change .line:nth-child(2) {
@@ -81,8 +63,7 @@ body {
 }
 
 .container nav .burger .change .line:nth-child(3) {
-  -webkit-transform: rotate(45deg) translate(-5px, -7px);
-          transform: rotate(45deg) translate(-5px, -7px);
+  transform: rotate(45deg) translate(-5px, -7px);
 }
 
 .container nav .mobile-nav {
@@ -92,22 +73,13 @@ body {
 
 .container nav .mobile-nav .nav-list {
   list-style-type: none;
-  background: -webkit-gradient(linear, left top, right top, color-stop(-150%, #66ff99), to(#ffffff));
   background: linear-gradient(to right, #66ff99 -150%, #ffffff 100%);
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-transition: 0.4s ease;
+  flex-direction: column;
   transition: 0.4s ease;
   position: absolute;
   top: -450px;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
   width: 100%;
   text-align: center;
 }
@@ -127,8 +99,6 @@ body {
 }
 
 .container nav .mobile-nav .show {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   position: relative;
   top: -40px;
@@ -136,17 +106,10 @@ body {
 }
 
 .container .developer {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
   padding: 4rem 2rem 4rem 2rem;
-  background: -webkit-gradient(linear, left top, right top, color-stop(-150%, #66ff99), to(#ffffff));
   background: linear-gradient(to right, #66ff99 -150%, #ffffff 100%);
   height: 100vh;
 }
@@ -181,25 +144,17 @@ body {
 .container .sticky-nav {
   display: none;
   position: absolute;
+  z-index: 2;
 }
 
 .container #about,
 .container #skills,
 .container #projects,
 .container #contacts {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   padding: 4rem 2rem 4rem 2rem;
   height: 100vh;
 }
@@ -250,20 +205,14 @@ body {
 }
 
 .container #skills {
-  background: -webkit-gradient(linear, right top, left top, color-stop(-200%, #66ff99), to(#ffffff));
   background: linear-gradient(to left, #66ff99 -200%, #ffffff 100%);
 }
 
 .container #skills .skills-list,
 .container #skills .projects-list {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .container #skills .skills-list div,
@@ -280,9 +229,12 @@ body {
 .container #projects .project {
   margin-bottom: 2rem;
   width: 100%;
+  height: 100%;
+  position: relative;
 }
 
 .container #projects .project img {
+  display: flex;
   width: 100%;
   border-top: 4px solid #c2f1d2;
 }
@@ -292,42 +244,101 @@ body {
   color: rgba(12, 21, 10, 0.71);
 }
 
+.container #projects .project .onTop {
+  position: absolute;
+  transition: 0.5s;
+  padding: 1rem;
+  text-align: left;
+  top: 0px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background: linear-gradient(to right, #66ff99 -150%, #ffffff 100%);
+  opacity: 0;
+  height: 100%;
+}
+
+.container #projects .project .onTop .work-about .title-about {
+  font-size: 26px;
+  height: 30px;
+  text-align: center;
+  color: rgba(12, 21, 10, 0.71);
+}
+
+.container #projects .project .onTop .work-about .title-about .work-description {
+  background: linear-gradient(to right, #66ff99 -150%, #ffffff 100%);
+  display: none;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right, #66ff99 -150%, #ffffff 100%);
+  text-align: left;
+  position: absolute;
+  left: 0;
+  top: 0;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.container #projects .project .onTop .work-about .title-about .work-description .para-text {
+  text-align: left;
+  padding: 1rem;
+  max-width: 400px;
+}
+
+.container #projects .project .onTop .title-about:hover .work-description {
+  display: flex;
+}
+
+.container #projects .project .onTop p {
+  font-size: 14px;
+  color: rgba(12, 21, 10, 0.71);
+}
+
+.container #projects .project .onTop .buttons button {
+  padding: 0.3rem 0;
+  margin-top: 3rem;
+  width: 100px;
+  background-color: #fff;
+  border: 1px solid rgba(12, 21, 10, 0.71);
+}
+
+.container #projects .project .onTop .buttons button a {
+  text-decoration: none;
+  font-size: 16px;
+  color: rgba(12, 21, 10, 0.71);
+  font-size: 14px;
+}
+
+.container #projects .project:hover .onTop {
+  opacity: 0.95;
+}
+
 .container #contacts {
-  background: -webkit-gradient(linear, left top, right top, color-stop(-150%, #66ff99), to(#ffffff));
   background: linear-gradient(to right, #66ff99 -150%, #ffffff 100%);
   text-align: center;
-  padding-bottom: 2rem;
+  padding-bottom: 12rem;
 }
 
-.container #contacts div {
-  margin-top: 2rem;
-}
-
-.container #contacts div a {
+.container #contacts .contacts-list a {
+  padding: 0 0.5rem;
   color: rgba(12, 21, 10, 0.85);
 }
 
-.container #contacts .social {
-  margin: 2rem 0;
+.container #contacts .contacts-list .social {
+  margin-top: 2rem;
 }
 
-.container #contacts .social a {
-  padding: 0 0.5rem;
-}
-
-.container #contacts .social a img {
-  height: 50px;
-  width: 50px;
+.container #contacts .contacts-list .social img {
+  height: 42px;
+  width: 42px;
 }
 
 footer {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  background: -webkit-gradient(linear, left top, right top, color-stop(-150%, #66ff99), to(#ffffff));
+  justify-content: center;
   background: linear-gradient(to right, #66ff99 -150%, #ffffff 100%);
 }
 
@@ -341,14 +352,9 @@ footer a {
     max-width: 768px;
   }
   #projects .projects-list {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    flex-wrap: wrap;
+    justify-content: center;
     max-width: 768px;
   }
   #projects .projects-list .project {
@@ -361,18 +367,13 @@ footer a {
 @media (min-width: 992px) {
   .container .show {
     position: fixed;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    justify-content: center;
+    align-items: center;
     width: 100%;
     top: 0px;
     background: white;
+    z-index: 6;
   }
   .container .hide {
     visibility: hidden;
@@ -386,12 +387,9 @@ footer a {
   .container .developer {
     padding-top: 8rem;
     padding-bottom: 8rem;
-    background: -webkit-gradient(linear, left top, right top, color-stop(-50%, #66ff99), color-stop(55%, #ffffff));
     background: linear-gradient(to right, #66ff99 -50%, #ffffff 55%);
   }
   .container .developer .person {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
   }
   .container .developer .person img {
@@ -400,16 +398,9 @@ footer a {
     margin: 0 2.5rem;
   }
   .container .developer .person div {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    flex-direction: column;
+    justify-content: center;
     text-align: left;
   }
   .container .developer .person div .name {
@@ -421,13 +412,8 @@ footer a {
     margin: 0 2.5rem;
   }
   .container .developer .person div .mini-nav {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
+    flex-direction: row;
     border-bottom: 0.5px solid rgba(12, 21, 10, 0.71);
     margin: 0 0.5rem;
   }
@@ -446,20 +432,12 @@ footer a {
     border-bottom: 1px solid rgba(12, 21, 10, 0.85);
   }
   .container .sticky-nav {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    justify-content: center;
   }
   .container .sticky-nav ul {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    justify-content: center;
     border-bottom: 0.5px solid rgba(12, 21, 10, 0.71);
     margin-top: 30px;
     padding-bottom: 0.5rem;
@@ -478,15 +456,9 @@ footer a {
     border-bottom: 1px solid rgba(12, 21, 10, 0.85);
   }
   .container #about {
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: reverse;
-        -ms-flex-direction: row-reverse;
-            flex-direction: row-reverse;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: row-reverse;
+    justify-content: center;
     padding: 8rem 2rem;
   }
   .container #about .about-title {
@@ -502,18 +474,11 @@ footer a {
     margin-right: 1.5rem;
   }
   .container #skills {
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
     width: 100%;
     padding: 8rem 2rem;
-    background: -webkit-gradient(linear, right top, left top, color-stop(-50%, #66ff99), color-stop(55%, #ffffff));
     background: linear-gradient(to left, #66ff99 -50%, #ffffff 55%);
   }
   .container #skills h2 {
@@ -529,13 +494,8 @@ footer a {
     margin-left: 1.5rem;
   }
   .container #projects {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: reverse;
-        -ms-flex-direction: row-reverse;
-            flex-direction: row-reverse;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    flex-direction: row-reverse;
+    justify-content: center;
     padding: 8rem 2rem;
   }
   .container #projects h2 {
@@ -548,8 +508,7 @@ footer a {
   }
   .container #projects .projects-list {
     width: 45%;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
+    flex-wrap: wrap;
     margin-right: 1.5rem;
   }
   .container #projects .projects-list .project {
@@ -561,19 +520,62 @@ footer a {
     width: 100%;
     height: 100%;
   }
+  .container #projects .projects-list .project .onTop {
+    z-index: 4;
+  }
+  .container #projects .projects-list .project .onTop .work-about .title-about {
+    font-size: 18px;
+  }
+  .container #projects .projects-list .project .onTop .work-about .title-about .work-description {
+    width: 220%;
+    height: 100%;
+  }
+  .container #projects .projects-list .project .onTop .work-about .title-about .work-description .para-text {
+    max-width: unset;
+    padding-bottom: 0.5rem;
+  }
+  .container #projects .projects-list .project .onTop p {
+    font-size: 14px;
+    color: rgba(12, 21, 10, 0.71);
+  }
+  .container #projects .projects-list .project .onTop .buttons {
+    margin-top: 1rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0;
+  }
+  .container #projects .projects-list .project .onTop .buttons button {
+    padding: 0.3rem 0;
+    margin-top: 0.5rem;
+    width: 100px;
+    background-color: #fff;
+    border: 1px solid rgba(12, 21, 10, 0.71);
+  }
+  .container #projects .projects-list .project .onTop .buttons button a {
+    text-decoration: none;
+    font-size: 16px;
+    color: rgba(12, 21, 10, 0.71);
+    font-size: 14px;
+  }
+  .container #projects .projects-list .project .onTop .inner {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    max-width: 500px;
+    margin-top: 0rem;
+  }
+  .container #projects .projects-list .project .onTop .inner button {
+    margin: 0.1rem 0.5rem;
+  }
   .container #contacts {
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
     width: 100%;
     padding: 8rem 2rem;
-    background: -webkit-gradient(linear, left top, right top, color-stop(-50%, #66ff99), color-stop(55%, #ffffff));
     background: linear-gradient(to right, #66ff99 -50%, #ffffff 55%);
   }
   .container #contacts h2 {
@@ -589,7 +591,6 @@ footer a {
     margin-left: 1.5rem;
   }
   .container footer {
-    background: -webkit-gradient(linear, left top, right top, color-stop(-50%, #66ff99), color-stop(55%, #ffffff));
     background: linear-gradient(to right, #66ff99 -50%, #ffffff 55%);
   }
 }
@@ -600,9 +601,7 @@ footer a {
     padding-bottom: 12rem;
   }
   .container .developer .person {
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    justify-content: center;
   }
   .container .developer .person img {
     width: 30%;
@@ -616,9 +615,7 @@ footer a {
   }
   .container .developer .person div .mini-nav {
     margin: 0.5rem 1rem;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    justify-content: center;
   }
   .container .developer .person div .mini-nav li {
     font-size: 24px;
@@ -665,6 +662,23 @@ footer a {
   .container #projects .projects-list .project h5 {
     font-size: 20px;
   }
+  .container #projects .projects-list .project .onTop .work-about .title-about {
+    font-size: 24px;
+    margin-bottom: 1rem;
+  }
+  .container #projects .projects-list .project .onTop .work-about .title-about .work-description .para-text {
+    width: 100%;
+    padding: 0 2rem 1rem 2rem;
+  }
+  .container #projects .projects-list .project .onTop p {
+    font-size: 18px;
+  }
+  .container #projects .projects-list .project .onTop .inner {
+    max-width: unset;
+  }
+  .container #projects .projects-list .project .onTop .inner button {
+    margin: 0.2rem 2rem;
+  }
   .container #contacts {
     padding: 8rem 0rem;
   }
@@ -674,12 +688,4 @@ footer a {
   .container #contacts .contacts-list {
     font-size: 24px;
   }
-  .container #contacts .contacts-list .social a {
-    padding: 0 1.5rem;
-  }
-  .container #contacts .contacts-list .social a img {
-    width: 70px;
-    height: 70px;
-  }
 }
-/*# sourceMappingURL=main.css.map */
