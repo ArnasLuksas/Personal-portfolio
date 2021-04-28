@@ -9,4 +9,4 @@
 - CSS
 - JavaScript
 
-<img width="1675" alt="personal portfolio" src="https://github.com/ArnasLuksas/luxes_web/blob/main/images/websitescreen.png">
+<img width="1675" alt="personal portfolio" src="https://github.com/ArnasLuksas/Personal-portfolio/blob/main/img/arnasluksas.png">
